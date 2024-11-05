@@ -6,3 +6,5 @@
 #--platform=linux/arm64 xiaoyaliu/alist
 vaultwarden/server
 wiznote/wizserver
+vaultwarden:server
+wiznote:wizserver
