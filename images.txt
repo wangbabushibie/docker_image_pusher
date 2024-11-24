@@ -6,3 +6,5 @@
 #--platform=linux/arm64 xiaoyaliu/alist
 vaultwarden/server
 wiznote/wizserver
+jasminexzzz/blossom
+mysql:8.0.31
