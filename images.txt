@@ -8,3 +8,4 @@ vaultwarden/server
 wiznote/wizserver
 jasminexzzz/blossom
 mysql:8.0.31
+python:3.10-slim
