@@ -5,7 +5,4 @@
 #支持指定架
 #--platform=linux/arm64 xiaoyaliu/alist
 vaultwarden/server
-wiznote/wizserver
 jasminexzzz/blossom
-mysql:8.0.31
-python:3.10-alpine
