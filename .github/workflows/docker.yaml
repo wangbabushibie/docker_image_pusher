@@ -128,7 +128,14 @@ jobs:
             name_space=$(echo "$image" | awk -F'/' '{if (NF==3) print $2; else if (NF==2) print $1; else print ""}')
             # 获取镜像名例  例如nginx
             image_name=$(echo "$image_name_tag" | awk -F':' '{print $1}')
-        
+
+            # 如果镜像标签是latest，获取实际的版本号
+            if [[ "$image_name_tag" == *":latest" ]]; then
+                image_id=$(docker inspect --format='{{.Id}}' $image)
+                actual_tag=$(docker inspect --format='{{index .RepoTags 0}}' $image_id | awk -F':' '{print $2}')
+                image_name_tag="${image_name}:${actual_tag}"
+            fi
+            
             name_space_prefix=""
             # 如果镜像名重名
             if [[ -n "${duplicate_images[$image_name]}" ]]; then
